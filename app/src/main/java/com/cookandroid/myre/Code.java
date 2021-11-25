@@ -8,7 +8,7 @@ public class Code {
         Random rd = new Random();
         for(int i=0; i<8; i++){
             char c= ' ';
-            int num =rd.nextInt()%16;
+            int num =rd.nextInt(16);
             if(num >= 10){
                 c = (char)((int)'A'+(num-(int)'A'));
             }else{
@@ -23,7 +23,7 @@ public class Code {
         Random rd = new Random();
         for(int i=0; i<10; i++){
             char c= ' ';
-            int num =rd.nextInt()%16;
+            int num =rd.nextInt(16);
             if(num >= 10){
                 c = (char)((int)'A'+(num-(int)'A'));
             }else{

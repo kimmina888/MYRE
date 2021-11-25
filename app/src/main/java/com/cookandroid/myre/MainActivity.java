@@ -17,36 +17,37 @@ public class MainActivity extends AppCompatActivity {
         codecheck = findViewById(R.id.codecheck);
         codeget = findViewById(R.id.codeget);
         codecheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                userDBHelper userDBHelper;
-                userDBHelper = new userDBHelper(getApplicationContext());
-                String code = findViewById(R.id.codecheck).toString();
-                if (userDBHelper.checkCode(code)) {
-                    Toast myToast = Toast.makeText(getApplicationContext(), "유저 코드 입력 성공", Toast.LENGTH_LONG);
-                    myToast.show();
-                    Intent intent = new Intent(getApplicationContext(), userMain.class);
-                    startActivity(intent);
-                } else {
-                    Toast myToast = Toast.makeText(getApplicationContext(), "유저 코드 입력 실패", Toast.LENGTH_LONG);
-                    myToast.show();
+                        @Override
+                        public void onClick(View view) {
+                            userDBHelper userDBHelper;
+                            userDBHelper = new userDBHelper(getApplicationContext());
+                            String code = findViewById(R.id.codecheck).toString();
+                            if (code=="AAAAAAAAAA") {
+                                Toast myToast = Toast.makeText(getApplicationContext(), "유저 코드 입력 성공", Toast.LENGTH_LONG);
+                                myToast.show();
+                                Intent intent = new Intent(getApplicationContext(), userMain.class);
+                                startActivity(intent);
+                            } else {
+                                Toast myToast = Toast.makeText(getApplicationContext(), "유저 코드 입력 실패", Toast.LENGTH_LONG);
+                                myToast.show();
+                            }
                 }
-            }
-        });
+            });
         codeget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Code code = new Code();
+                /*Code code = new Code();
                 char[] ucode = new char[10];
                 ucode = code.RandomUserCode();
                 userDBHelper userDBHelper;
                 userDBHelper = new userDBHelper(getApplicationContext());
                 String scode = new String(ucode);
                 userDBHelper.insertUser(scode);
-                Intent intent = new Intent(getApplicationContext(), userMain.class);
-                startActivity(intent);
+                Toast toast = Toast.makeText(getApplicationContext(),"my code : "+scode,Toast.LENGTH_LONG);
+                toast.show();*/
+               Intent intent = new Intent(getApplicationContext(),userMain.class);
+               startActivity(intent);
             }
         });
-
     }
 }

@@ -16,11 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".userMain"/>
+        <activity android:name=".myCodeView"/>
+        <activity android:name=".CreateTeam"/>
         <activity android:name=".MyTeamList"/>
         <activity android:name=".AddTeam"/>
-        <activity android:name=".CreateTeam"/>
-        <activity android:name=".userMain"></activity>
-        <activity android:name=".myCodeView"/>
     </application>
 
 </manifest>

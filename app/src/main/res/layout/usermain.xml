@@ -4,73 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="#1A215E"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1"
+        android:background="#1A215E"
         android:gravity="center"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MYRE"
-            android:textSize="40dp"
-            android:gravity="center"
             android:layout_gravity="center"
-            />
+            android:gravity="center"
+            android:text="MYRE"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1"
-        >
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_weight="1">
+            android:orientation="horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="my team"
-                android:layout_margin="40dp"
                 android:id="@+id/myteamlist"
-                />
+                android:layout_width="50%"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FBE9E7"
+                android:text="my team"
+                android:textSize="20dp" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="add team"
-                android:layout_margin="40dp"
                 android:id="@+id/addteam"
-                />
+                android:layout_width="50%"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FBE9E7"
+                android:text="add team"
+                android:textSize="20dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_weight="1">
+            android:orientation="horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="create team"
-                android:layout_margin="40dp"
                 android:id="@+id/createteam"
-                />
+                android:layout_width="50%"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FBE9E7"
+                android:text="create team"
+                android:textSize="20dp" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="my code"
-                android:layout_margin="40dp"
                 android:id="@+id/mycode"
-                />
+                android:layout_width="50%"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FBE9E7"
+                android:text="my code"
+                tools:textSize="20dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
